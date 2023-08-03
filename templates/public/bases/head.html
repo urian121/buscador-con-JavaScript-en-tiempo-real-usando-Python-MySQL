@@ -1,0 +1,20 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block WebDeveloper %}{% endblock %}</title>
+  <link
+    rel="shortcut icon"
+    href="{{url_for('static', filename ='imgs/favicon.ico')}}"
+    type="image/x-icon" />
+
+  <!--fuente-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caladea:wght@700&family=Open+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename ='css/home.css') }}" />
+</head>

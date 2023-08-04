@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  {% include 'public/head.html' %}
+  <body>
+    {% block body %}
+
+    <h2>
+      Buscador con Javascript
+
+      <img
+        style="max-width: 60px"
+        src="{{ url_for('static', filename ='imgs/javascript.png') }}"
+        alt="logo-javascript" />
+      😱
+    </h2>
+
+    <section class="media-list">
+      <input type="search" placeholder="Buscar amigo 😉" id="buscador_amigo" />
+      <ul>
+        {% for amigo in amigos %}
+        <li
+          class="lista_amigo"
+          data-search="{{ amigo.nombre }} {{ amigo.profesion }}">
+          <div class="media">
+            <a href="#" class="media__img">
+              <img src="/static/img_amigos/{{ amigo.imagen }}" alt="Octocat" />
+            </a>
+            <p class="media__body">{{ amigo.nombre}}</p>
+            <p>{{ amigo.profesion }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    {% endblock %}
+    <!---->
+
+    <script src="{{ url_for('static', filename ='js/filtro.js') }}"></script>
+  </body>
+</html>

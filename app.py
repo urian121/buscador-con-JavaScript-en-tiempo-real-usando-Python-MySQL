@@ -14,7 +14,7 @@ app.secret_key = '97110c78ae51a45af397be6534caef90ebb9b1dcb3380af008f90b23a5d161
 # Definiendo una funcion llamada inicio
 def inicio():
     # Retornando una vista sin parametros
-    return render_template('index.html', amigos=lista_amigos())
+    return render_template('public/index.html', amigos=lista_amigos())
 
 
 def lista_amigos():

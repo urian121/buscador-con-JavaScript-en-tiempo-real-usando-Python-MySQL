@@ -8,13 +8,16 @@ body {
 }
 
 .media-list {
+  background-color: #333;
+  display: inline-block;
+  text-align: left;
+}
+ul {
   padding: 20px 20px 0;
   height: 600px;
   overflow-y: auto;
+
   list-style: none;
-  display: inline-block;
-  background-color: #333;
-  text-align: left;
 }
 .media {
   display: block;

@@ -40,8 +40,8 @@ searchInput.addEventListener("input", function () {
       mensaje = document.createElement("p");
       mensaje.textContent = "Amigo no encontrado 😭";
       mensaje.classList.add("mensaje");
-      let media_list = document.querySelector(".media-list");
-      media_list.appendChild(mensaje);
+      let buscadorAmigo = document.querySelector("#buscador_amigo");
+      buscadorAmigo.parentNode.insertBefore(mensaje, buscadorAmigo.nextSibling);
     }
     console.log("No se encontró ningún amigo");
   } else {
